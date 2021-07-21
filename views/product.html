@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour API</title>
+    <style>
+        *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body,html{
+    height: 100%;
+}
+nav{
+    background-color: lawngreen;
+    text-decoration: none;
+    list-style:none;
+}
+nav ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+nav ul li{
+    margin: 10px 15px;
+    font-size: 18px;
+    list-style: none;
+    text-decoration: none;
+}
+.brand-logo{
+flex-grow: 1;
+flex-shrink: 0;
+flex-basis: auto;
+}
+.main{
+    height: 100%;
+    margin-bottom: 50px;
+}
+.banner{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner-text{
+    margin-right:10vw;
+}
+.not-organic{
+    display: none;
+}
+footer{
+display: flex;
+background-color: lawngreen;
+font: bolder;
+font-size: 22px;
+margin-top: 50px;
+margin: 20px;
+padding: 15px;
+width: 100vw;
+justify-content: center;
+align-items: center;
+}
+    </style>
+</head>
+<body>
+<nav>
+    <ul>
+        <li class="brand-logo"><a href="">Fruity && Juices Company</a></li>
+        <li><a href="/overview">Home</a></li>
+        <li><a href="">Login</a></li>
+        <li><a href="">Signup</a></li>
+        <li><a href="/products">Products</a></li>
+        <li><a href="">Logout</a></li>
+    </ul>
+</nav>
+<section class="main">
+        <div class="products">
+            <a href="/"> ↩ </a>
+            <div class="mango">
+                <div class="mango-details">
+                    <h4 class="product-organic {%Not-Organic%}">Organic</h4>
+            <div>
+                <h1 class="product-name">{%PRODUCTNAME%}</h1>
+            </div>
+         <div class="product-image">
+            <p class="product-image">{%PRODUCTIMAGE%}</p>
+         </div>
+         <div class="product-origin">
+            <h4 class="product-origin">From:{%PRODUCTFROM%}</h4>
+         </div>
+           <div class="product-price">
+            <h4 class="product-price">{%PRODUCTPRICE%}Ksh</h4>
+           </div>
+            </div>
+            <div>
+                <a href="">ADD TO CART</a>
+            </div>
+                <div class="product-details">
+      {%PRODUCTDESCRIPTION%}
+                </div>
+            </div> 
+        </div>
+        </section>
+<footer>
+    <div>Fruity && Juices Company © 2021</div>
+</footer>
+    <script src="/index.js"></script>
+</body>
+</html>
